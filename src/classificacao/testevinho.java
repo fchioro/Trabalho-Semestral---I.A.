@@ -28,7 +28,7 @@ public class testevinho {
 				arvore.buildClassifier(baseTreino);
 				nave.buildClassifier(baseTreino);
 				
-				System.out.println(arvore);
+				//System.out.println(arvore);
 				//System.out.println(nave);
 
 				System.out.println("REAL\tARVORE\tNAIVE BAYES");
