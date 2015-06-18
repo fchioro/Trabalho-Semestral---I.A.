@@ -1,0 +1,146 @@
+% 1. Título: Harmonizacao de vinhos de acordo com as caracteristicas
+% 
+% 2. Fontes:
+%      (a) Creator: N. C. Felipe
+%      (b) Referências: Academia do Vinho, Uniao Brasileira de Vitivinicultura e Associacao Brasileira de Sommeliers
+%      (c) Date: Abril, 2015
+% 
+% 3. Informações Relevantes:
+%    --- Cálculo baseado na Academia do Vinho, Uniao Brasileira de Vitivinicultura e Associacao Brasileira de Sommeliers
+% 
+% 4. Número de instâncias: 90 (10 para Grupo 01, 16 para Grupo 02, 17 para o Grupo 03, 16 para o Grupo 04, 16 para o Grupo 05, 15 para o Grupo 06)
+% 
+% 5. Número de atributos: 6 nominais
+% 
+% 6. Informações dos atributos:
+%    1. Cor:
+%       -- Tinto
+%       -- Branco
+%       -- Rose
+%    2. Teor do Acucar:
+%       -- Seco
+%       -- Meio-Seco
+%       -- Suave
+%    3. Fabricacao:
+%       -- Envelhecido
+%       -- Jovem
+%    4. Corpo:
+%       -- Encorpado
+%       -- Leve
+%    5. Classificacao:
+%       -- Mesa
+%       -- Licoroso
+%       -- Frisante
+%    6. Classe: 
+%       -- Grupo 01 (Carnes Brancas, Massas e Vegetais)
+%       -- Grupo 02 (Carnes Brancas, Massas e Embutidos)
+%       -- Grupo 03 (Queijos, Massas e Embutidos)
+%       -- Grupo 04 (Carnes Brancas, Queijos, Massas, Vegetais, Embutidos e Carnes Vermelhas)
+%       -- Grupo 05 (Queijos, Vegetais, Embutidos e Frutos do Mar)
+%       -- Grupo 06 (Queijos, Embutidos e Carnes Vermelhas)
+% 
+% 7. Distribuição de Classe: 11,11% para Grupo 01, 17,78% para o Grupo 02, 18,89% para o Grupo 05, 17,78% para o Grupo 04, 17,78% para o Grupo 05 e 16,66% para o Grupo 06.
+
+@RELATION harmonizacao_vinhos
+
+@ATTRIBUTE cor			{tinto, branco, Rose}
+@ATTRIBUTE teor			{seco, meio-seco, suave}
+@ATTRIBUTE fabricacao	 	{envelhecido, jovem}
+@ATTRIBUTE corpo		{encorpado, leve}
+@ATTRIBUTE classificacao	{mesa, licoroso, frisante}
+@ATTRIBUTE classe		{grupo01, grupo02, grupo03, grupo04, grupo05, grupo06}
+
+@DATA
+branco, seco, envelhecido, encorpado, mesa, grupo01
+branco, seco, envelhecido, encorpado, licoroso, grupo03
+branco, seco, envelhecido, leve, mesa, grupo01
+branco, seco, envelhecido, leve, licoroso, grupo03
+branco, seco, jovem, encorpado, mesa, grupo01
+branco, seco, jovem, encorpado, licoroso, grupo03
+branco, seco, jovem, encorpado, frisante, grupo01
+branco, seco, jovem, leve, mesa, grupo01
+branco, seco, jovem, leve, licoroso, grupo03
+branco, seco, jovem, leve, frisante, grupo01
+branco, meio-seco, envelhecido, encorpado, mesa, grupo01
+branco, meio-seco, envelhecido, encorpado, licoroso, grupo03
+branco, meio-seco, envelhecido, leve, mesa, grupo01
+branco, meio-seco, envelhecido, leve, licoroso, grupo03
+branco, meio-seco, jovem, encorpado, mesa, grupo01
+branco, meio-seco, jovem, encorpado, licoroso, grupo03
+branco, meio-seco, jovem, encorpado, frisante, grupo02
+branco, meio-seco, jovem, leve, mesa, grupo01
+branco, meio-seco, jovem, leve, licoroso, grupo03
+branco, meio-seco, jovem, leve, frisante, grupo02
+branco, suave, envelhecido, encorpado, mesa, grupo03
+branco, suave, envelhecido, encorpado, licoroso, grupo03
+branco, suave, envelhecido, leve, mesa, grupo03
+branco, suave, envelhecido, leve, licoroso, grupo03
+branco, suave, jovem, encorpado, mesa, grupo03
+branco, suave, jovem, encorpado, licoroso, grupo03
+branco, suave, jovem, encorpado, frisante, grupo02
+branco, suave, jovem, leve, mesa, grupo03
+branco, suave, jovem, leve, licoroso, grupo03
+branco, suave, jovem, leve, frisante, grupo02
+tinto, seco, envelhecido, encorpado, mesa, grupo06
+tinto, seco, envelhecido, encorpado, licoroso, grupo06
+tinto, seco, envelhecido, leve, mesa, grupo06
+tinto, seco, envelhecido, leve, licoroso, grupo06
+tinto, seco, jovem, encorpado, mesa, grupo06
+tinto, seco, jovem, encorpado, licoroso, grupo03
+tinto, seco, jovem, encorpado, frisante, grupo02
+tinto, seco, jovem, leve, mesa, grupo06
+tinto, seco, jovem, leve, licoroso, grupo06
+tinto, seco, jovem, leve, frisante, grupo02
+tinto, meio-seco, envelhecido, encorpado, mesa, grupo04
+tinto, meio-seco, envelhecido, encorpado, licoroso, grupo04
+tinto, meio-seco, envelhecido, leve, mesa, grupo04
+tinto, meio-seco, envelhecido, leve, licoroso, grupo04
+tinto, meio-seco, jovem, encorpado, mesa, grupo04
+tinto, meio-seco, jovem, encorpado, licoroso, grupo04
+tinto, meio-seco, jovem, encorpado, frisante, grupo02
+tinto, meio-seco, jovem, leve, mesa, grupo04
+tinto, meio-seco, jovem, leve, licoroso, grupo04
+tinto, meio-seco, jovem, leve, frisante, grupo02
+tinto, suave, envelhecido, encorpado, mesa, grupo05
+tinto, suave, envelhecido, encorpado, licoroso, grupo05
+tinto, suave, envelhecido, leve, mesa, grupo05
+tinto, suave, envelhecido, leve, licoroso, grupo05
+tinto, suave, jovem, encorpado, mesa, grupo05
+tinto, suave, jovem, encorpado, licoroso, grupo05
+tinto, suave, jovem, encorpado, frisante, grupo02
+tinto, suave, jovem, leve, mesa, grupo05
+tinto, suave, jovem, leve, licoroso, grupo05
+tinto, suave, jovem, leve, frisante, grupo02
+Rose, seco, envelhecido, encorpado, mesa, grupo06
+Rose, seco, envelhecido, encorpado, licoroso, grupo06
+Rose, seco, envelhecido, leve, mesa, grupo06
+Rose, seco, envelhecido, leve, licoroso, grupo06
+Rose, seco, jovem, encorpado, mesa, grupo06
+Rose, seco, jovem, encorpado, licoroso, grupo06
+Rose, seco, jovem, encorpado, frisante, grupo02
+Rose, seco, jovem, leve, mesa, grupo06
+Rose, seco, jovem, leve, licoroso, grupo06
+Rose, seco, jovem, leve, frisante, grupo02
+Rose, meio-seco, envelhecido, encorpado, mesa, grupo04
+Rose, meio-seco, envelhecido, encorpado, licoroso, grupo04
+Rose, meio-seco, envelhecido, leve, mesa, grupo04
+Rose, meio-seco, envelhecido, leve, licoroso, grupo04
+Rose, meio-seco, jovem, encorpado, mesa, grupo04
+Rose, meio-seco, jovem, encorpado, licoroso, grupo04
+Rose, meio-seco, jovem, encorpado, frisante, grupo02
+Rose, meio-seco, jovem, leve, mesa, grupo04
+Rose, meio-seco, jovem, leve, licoroso, grupo04
+Rose, meio-seco, jovem, leve, frisante, grupo02
+Rose, suave, envelhecido, encorpado, mesa, grupo05
+Rose, suave, envelhecido, encorpado, licoroso, grupo05
+Rose, suave, envelhecido, leve, mesa, grupo05
+Rose, suave, envelhecido, leve, licoroso, grupo05
+Rose, suave, jovem, encorpado, mesa, grupo05
+Rose, suave, jovem, encorpado, licoroso, grupo05
+Rose, suave, jovem, encorpado, frisante, grupo02
+Rose, suave, jovem, leve, mesa, grupo05
+Rose, suave, jovem, leve, licoroso, grupo05
+Rose, suave, jovem, leve, frisante, grupo02
+%
+%
+%
