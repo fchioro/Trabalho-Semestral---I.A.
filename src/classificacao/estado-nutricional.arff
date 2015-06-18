@@ -1,0 +1,119 @@
+% 1. Título: Estado Nutricional de Acordo com IMC
+% 
+% 2. Fontes:
+%      (a) Criador: G. C. Gustavo
+%      (b) Referência: Apostila de Avaliação Nutricional
+%      (c) Data: Abril, 2015
+% 
+% 3. Informações Relevantes:
+%    --- Cálculo baseado na avaliação da Organização Mundial de Saúde de acordo com o IMC
+% 
+% 4. Número de instâncias: 80 (20 de cada classe)
+% 
+% 5. Númeo de atributos: 4 numéricos e 1 nominal (classe)
+% 
+% 6. Informações dos atributos:
+%    1. Sexo masculino (valor 1) e feminino (valor 0)
+%    2. Idade em anos
+%    3. Peso em Kg
+%    4. Estatura em metros
+%    5. Classe: 
+%       -- Desnutrido
+%       -- Ideal
+%       -- Sobrepeso
+%       -- Obeso
+% 
+% 7. Distribuição de Classe: 25% de dados para cada classe.
+
+@RELATION estado-nutricional
+
+@ATTRIBUTE idade		REAL
+@ATTRIBUTE peso		 	REAL
+@ATTRIBUTE estatura		REAL
+@ATTRIBUTE classe 		{desnutrido,ideal,sobrepeso,obeso}
+
+@DATA
+3,10,0.96,desnutrido
+13,30,1.50,desnutrido
+23,57,1.80,desnutrido
+63,60,1.70,desnutrido
+4,14,1.03,desnutrido
+14,40,1.60,desnutrido
+24,55,1.73,desnutrido
+64,67,1.83,desnutrido
+5,15,1.09,desnutrido
+15,41,1.60,desnutrido
+35,50,1.68,desnutrido
+75,57,1.73,desnutrido
+1,7,0.73,desnutrido
+11,29,1.45,desnutrido
+41,47,1.60,desnutrido
+61,43,1.49,desnutrido
+3,12,0.95,desnutrido
+17,40,1.60,desnutrido
+47,50,1.68,desnutrido
+67,50,1.65,desnutrido
+2,11,0.87,ideal
+7,23,1.20,ideal
+20,72,1.76,ideal
+60,75,1.78,ideal
+4,16,1.03,ideal
+10,31,1.36,ideal
+30,80,1.81,ideal
+70,69,1.69,ideal
+2,12,0.90,ideal
+12,39,1.46,ideal
+22,59,1.63,ideal
+72,58,1.61,ideal
+5,18,1.08,ideal
+19,60,1.70,ideal
+20,63,1.74,ideal
+61,52,1.63,ideal
+1,9,0.73,ideal
+15,50,1.65,ideal
+32,54,1.61,ideal
+68,60,1.62,ideal
+1,11,0.75,sobrepeso
+18,80,1.77,sobrepeso
+25,72,1.65,sobrepeso
+88,78,1.66,sobrepeso
+3,18,1.00,sobrepeso
+13,45,1.45,sobrepeso
+21,80,1.76,sobrepeso
+67,79,1.69,sobrepeso
+2,12,0.84,sobrepeso
+12,44,1.43,sobrepeso
+57,75,1.67,sobrepeso
+65,80,1.70,sobrepeso
+4,18,1.01,sobrepeso
+17,70,1.66,sobrepeso
+49,78,1.68,sobrepeso
+81,81,1.69,sobrepeso
+5,21,1.08,sobrepeso
+12,47,1.48,sobrepeso
+43,77,1.65,sobrepeso
+65,81,1.69,sobrepeso
+1,13,0.69,obeso
+18,87,1.72,obeso
+45,89,1.68,obeso
+66,92,1.75,obeso
+2,15,0.84,obeso
+16,80,1.63,obeso
+30,88,1.69,obeso
+70,82,1.67,obeso
+5,20,1.02,obeso
+11,43,1.39,obeso
+45,87,1.69,obeso
+75,85,1.69,obeso
+1,12,0.70,obeso
+12,50,1.41,obeso
+28,105,1.72,obeso
+81,80,1.65,obeso
+5,25,1.08,obeso
+6,26,1.10,obeso
+20,99,1.72,obeso
+60,92,1.70,obeso
+%
+%
+%
+

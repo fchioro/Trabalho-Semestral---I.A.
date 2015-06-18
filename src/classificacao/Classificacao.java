@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package classificacao;
 
 import java.io.FileReader;
@@ -16,19 +12,19 @@ public class Classificacao {
 
     public static void main(String[] args) throws Exception{
         
-		// Lendo os exemplos a partir do arquivo iris.arff
-		FileReader leitor = new FileReader("C:\\estado-nutricional.arff");
-		Instances iris = new Instances(leitor);
+		// Lendo os exemplos a partir do arquivo estado-nutricional.arff
+		FileReader leitor = new FileReader("estado-nutricional.arff");
+		Instances base = new Instances(leitor);
 		
-		// Definindo o Ã­ndice do atributo classe (Ãºltimo atributo do conjunto)
-		iris.setClassIndex(iris.numAttributes() - 1);
+		// Definindo o indice do atributo classe (ultimo atributo do conjunto)
+		base.setClassIndex(base.numAttributes() - 1);
 		
 		// Criando uma nova base com os exemplos embaralhados 
-		iris = iris.resample(new Random());			
+		base = base.resample(new Random());			
 		
 		// Abordagem Hold out de validaÃ§Ã£o cruzada 
-		Instances baseTeste = iris.testCV(3, 0); // Obtendo subconjunto para testes
-		Instances baseTreino = iris.trainCV(3, 0); // Obtendo subconjunto para treinamento
+		Instances baseTeste = base.testCV(3, 0); // Obtendo subconjunto para testes
+		Instances baseTreino = base.trainCV(3, 0); // Obtendo subconjunto para treinamento
 		
 		// Criando os classificadores que serÃ£o avaliados
 		IBk knn = new IBk(5); // knn com 3 vizinhos
@@ -38,12 +34,12 @@ public class Classificacao {
 		knn.buildClassifier(baseTreino);
 		vizinho.buildClassifier(baseTreino);
 		
-		System.out.println("real\tknn\tvizinho"); // imprimindo rÃ³tulos para as colunas
+		System.out.println("real\tknn\tvizinho"); // imprimindo rotulos para as colunas
 		
 		for (int e = 0; e < baseTeste.numInstances(); e++) {
 			Instance exemplo = baseTeste.instance(e);
 			System.out.print(exemplo.classValue()); // imprimindo o valor da classe real do exemplo
-			exemplo.setClassMissing(); // removendo informaÃ§Ã£o da classe
+			exemplo.setClassMissing(); // removendo informacao da classe
 			double classe = knn.classifyInstance(exemplo); // resposta do knn
 			System.out.print("\t" + classe); // imprimindo resposta do knn
 			classe = vizinho.classifyInstance(exemplo); // resposta do vizinho mais prÃ³ximo
